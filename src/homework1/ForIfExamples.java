@@ -37,7 +37,7 @@ public class ForIfExamples {
         // 4. Տպեք բոլոր կենտ թվերը 1-ից 20, առանց օգտագործելու % օպերատորը:
 
 
-            for (int q = 1; q < 100; q = q + 2) {
+            for (int q = 1; q < 20; q = q + 2) {
                 System.out.println("c: " + q);
             }
 
