@@ -45,10 +45,14 @@ public class ForIfExamples {
 
        // 5. Գտեք 1-ից 100 բոլոր զույգ թվերի քանակը, առանց օգտագործելու % օպերատորը:
 
+            int count = 0;
 
             for (int c = 0; c < 100; c = c + 2) {
-               System.out.println("c: " + c);
+                count++;
             }
+
+        System.out.print("count: " + count);
+
 
     }
 }
