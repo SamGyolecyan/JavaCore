@@ -4,7 +4,6 @@ public class ForIfExamples {
 
     public static void main(String[] args) {
 
-        // Hello World
 
         // 1. Տպեք թվերը 1-ից 10 օգտագործելով for ցիկլը:
 
