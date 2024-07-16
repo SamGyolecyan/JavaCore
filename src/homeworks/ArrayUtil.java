@@ -73,7 +73,7 @@ public class ArrayUtil {
 
         int num = numbers[numbers.length / 2];
 
-        if (num > 2) {
+        if (numbers.length - 4 > 2) {
             System.out.print(num + ",");
         } else {
             System.out.println("can't print middle values");
