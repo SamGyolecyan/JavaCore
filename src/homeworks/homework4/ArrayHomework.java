@@ -2,38 +2,34 @@ package homeworks.homework4;
 
 public class ArrayHomework {
 
-    public static void main(String[] args) {
-
+    void arrayHomeSim1() {
 
         // 1. Ունենք թվերի մասիվ, մեջը խառը 10 թիվ։ Ունենք int n = 6; Պետք է հաշվել,
         // թե քանի հատ n փոփոխականից կա մեր թվերի մեջ, ու տպել քանակը։ Եթե չկա՝ 0.
 
 
-        System.out.print("1.   " + "\n");
-
         int[] array1 = {1, 6, 2, 0, 32, 6, 7, 8, 90, 21};
 
         int n = 6;
 
-        int count1 = 0;
+        int count = 0;
 
         for (int i = 0; i < array1.length; i++) {
             if (array1[i] == n) {
-                count1++;
+                count++;
             }
         }
 
-        System.out.println("The count of array: " + count1);
+        System.out.println("The count of array: " + count);
+
+    }
 
 
-        System.out.println("-------------");
-
+    void arrayHomeSim2() {
 
         // 2. Ունենք թվերի մասիվ, մեջը խառը 10 թիվ,
         // գրել ծրագիր, որը էդ մասիվի մեջի թվերը թարս կդասավորի։
 
-
-        System.out.print("2.   " + "\n");
 
         int[] array2 = {3, 9, 2, 1, 71, 4, 2, 12, 43, 98};
 
@@ -48,14 +44,14 @@ public class ArrayHomework {
         }
 
 
-        System.out.println("-------------");
+    }
 
+
+    void arrayHomeSim3() {
 
         // 3.Ունենք թվերի մասիվ, մեջը խառը 10 թիվ,
         // գրել ծրագիր, որը էդ մասիվի մեջ կհաշվի թե քանի կրկնվող թիվ կա։
 
-
-        System.out.print("3.   " + "\n");
 
         int[] array3 = {19, 60, 19, 55, 97, 10, 19, 1, 8, 2};
 
@@ -75,8 +71,9 @@ public class ArrayHomework {
 
         System.out.println("New count: " + NewCount);
 
+    }
 
-        System.out.println("-------------");
+    void arrayHomeSim4() {
 
 
         // 4. Ունենք char[] chars = {'բ', 'ա', 'ր', 'և', 'ա', 'շ', 'խ', 'ա', 'ր', 'հ'} կամ
@@ -84,23 +81,22 @@ public class ArrayHomework {
         // թե քանի ձայնավոր կա այս մասիվի մեջ, ու տպել քանակը։
 
 
-        System.out.print("4.   " + "\n");
-
         String[] letters = {"բ", "ա", "ր", "և", "ա", "շ", "խ", "ա", "ր", "հ"};
 
         String[] vowels = {"ա", "ի", "ու", "է", "ը", "օ"};
 
-        int count2 = 0;
+        int count = 0;
 
         for (int i = 0; i < letters.length; i++) {
             for (int j = 0; j < vowels.length; j++) {
                 if (vowels[j] == letters[i]) {
-                    count2++;
+                    count++;
                 }
             }
         }
-        System.out.println("The count of vowels: " + count2);
+        System.out.println("The count of vowels: " + count);
 
     }
+
 
 }
