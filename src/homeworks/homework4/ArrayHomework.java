@@ -1,4 +1,4 @@
-package homeworks;
+package homeworks.homework4;
 
 public class ArrayHomework {
 
