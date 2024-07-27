@@ -2,12 +2,12 @@ package homeworks.homework3;
 
 public class ArrayUtil {
 
-    public static void main(String[] args) {
-
-        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
-
+    void arrayUtilSim1() {
 
         // 1. Տպել բոլոր էլեմենտները իրար կողք, բաժանված պռաբելով։
+
+
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
 
         System.out.print("1.   ");
 
@@ -15,43 +15,49 @@ public class ArrayUtil {
             System.out.print(numbers[i] + " ");
         }
 
+    }
 
-        System.out.println("\n" + "------------");
-
+    void arrayUtilSim2() {
 
         // 2. Տպել մասիվի առաջին էլեմենտը։
 
-        System.out.print("2.   ");
+
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
 
         System.out.println(numbers[0]);
 
+    }
 
-        System.out.println("------------");
 
+    void arrayUtilSim3() {
 
         // 3. Տպել մասիվի վերջին էլեմենտը։
 
-        System.out.print("3.   ");
+
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
 
         System.out.println(numbers[numbers.length - 1]);
 
+    }
 
-        System.out.println("------------");
 
+    void arrayUtilSim4() {
 
         // 4. Տպել մասիվի երկարությունը։
 
-        System.out.print("4.   ");
+
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
 
         System.out.println(numbers.length);
 
+    }
 
-        System.out.println("------------");
 
+    void arrayUtilSim5() {
 
         // 5. Տպել մասիվի ամենափոքր թիվը։
 
-        System.out.print("5.   ");
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
 
         int min = numbers[0];
 
@@ -61,15 +67,17 @@ public class ArrayUtil {
             }
         }
         System.out.print(min);
+    }
 
-        System.out.println("\n" + "------------");
 
+    void arrayUtilSim6() {
 
         // 6. Տպել մասիվի մեջտեղի թիվը, ստուգել որ 2-ից մեծ լինի երկարությունը, եթե փոքր կամ հավասար էղավ,
         // տպեք որ can't print middle values. եթե զույգ է մասիվի մեջի
         // էլեմենտների թիվը, տպեք մեջտեղի երկու էլեմենտները, եթե կենտ է մի հատը։
 
-        System.out.print("6.   ");
+
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
 
         int num = numbers[numbers.length / 2];
 
@@ -86,13 +94,15 @@ public class ArrayUtil {
             System.out.println(num);
         }
 
+    }
 
-        System.out.println("------------");
 
+    void arrayUtilSim7() {
 
         // 7. Հաշվել ու տպել մասիվում զույգերի քանակը։
 
-        System.out.print("7.   ");
+
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
 
         int count1 = 0;
 
@@ -103,12 +113,15 @@ public class ArrayUtil {
         }
         System.out.println(count1);
 
-        System.out.println("------------");
+    }
 
+
+    void arrayUtilSim8() {
 
         // 8. Հաշվել ու տպել մասիվում կենտերի քանակը։
 
-        System.out.print("8.   ");
+
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
 
         int count2 = 0;
 
@@ -119,12 +132,14 @@ public class ArrayUtil {
         }
         System.out.println(count2);
 
-        System.out.println("------------");
+    }
 
+    void arrayUtilSim9() {
 
         // 9. Տպել մասիվում էլեմենտների գումարը։
 
-        System.out.print("9.   ");
+
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
 
         int sum = 0;
 
@@ -132,23 +147,25 @@ public class ArrayUtil {
             sum = sum + numbers[i];
         }
         System.out.println(sum);
+    }
 
-        System.out.println("------------");
 
+    void arrayUtilSim10() {
 
         // 10. Տպել մասիվում թվերի միջին թվաբանականը։
 
-        System.out.print("10.  ");
 
-        int sum1 = 0;
+        int[] numbers = {1, 6, 3, 9, 15, 52, -3, 5, 8};
+
+        int sum = 0;
 
         int avg;
 
         for (int i = 0; i < numbers.length; i++) {
-            sum1 += numbers[i];
+            sum += numbers[i];
         }
 
-        avg = sum1 / numbers.length;
+        avg = sum / numbers.length;
 
         System.out.println(avg);
 
