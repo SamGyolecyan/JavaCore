@@ -2,53 +2,74 @@ package homeworks.homework1;
 
 public class ForIfExamples {
 
-    public static void main(String[] args) {
+
+    void forIfSim1(int n) {
 
 
         // 1. Տպեք թվերը 1-ից 10 օգտագործելով for ցիկլը:
 
 
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.println("i: " + i);
         }
 
-        System.out.println("--------------");
+
+    }
+
+
+    void forIfSim2(int n) {
+
 
         // 2. Գտեք թվերի գումարը 1-ից 100 օգտագործելով for:
 
 
         int sum = 0;
 
-        for (int x = 0; x < 100; x++) {
-            sum = sum + x;
+        for (int i = 0; i < n; i++) {
+            sum = sum + i;
         }
         System.out.println("sum: " + sum);
 
-        System.out.println("--------------");
+
+    }
+
+
+    void forIfSim3(int n) {
+
 
         // 3. Տպեք թվերը 1-ից 50 հակառակ հերթականությամբ օգտագործելով for:
 
 
-        for (int y = 50; y >= 1; y--) {
-            System.out.println("y: " + y);
+        for (int i = n; i >= 1; i--) {
+            System.out.println("y: " + i);
         }
 
-        System.out.println("--------------");
+
+    }
+
+
+    void forIfSim4(int n) {
+
 
         // 4. Տպեք բոլոր կենտ թվերը 1-ից 20, առանց օգտագործելու % օպերատորը:
 
 
-        for (int q = 1; q < 20; q = q + 2) {
-            System.out.println("c: " + q);
+        for (int i = 1; i < n; i = i + 2) {
+            System.out.println("c: " + i);
         }
 
-        System.out.println("--------------");
+
+    }
+
+
+    void forIfSim5(int n) {
+
 
         // 5. Գտեք 1-ից 100 բոլոր զույգ թվերի քանակը, առանց օգտագործելու % օպերատորը:
 
         int count = 0;
 
-        for (int c = 0; c < 100; c = c + 2) {
+        for (int i = 0; i < n; i = i + 2) {
             count++;
         }
 
@@ -56,4 +77,5 @@ public class ForIfExamples {
 
 
     }
+
 }
