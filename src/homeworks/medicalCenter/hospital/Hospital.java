@@ -18,7 +18,7 @@ public class Hospital implements Comments, ChangeColor {
 
 
     public static void main(String[] args) {
-        // Hello world
+
         boolean isRunTime = true;
 
         while (isRunTime) {
