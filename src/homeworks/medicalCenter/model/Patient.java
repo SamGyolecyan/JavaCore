@@ -60,7 +60,7 @@ public class Patient extends Person {
                 ChangeColor.ANSI_YELLOW + ", surname=" + ChangeColor.ANSI_YELLOW + "'" + ChangeColor.ANSI_RESET + getSurname() + ChangeColor.ANSI_YELLOW + "\'" + ChangeColor.ANSI_RESET +
                 ChangeColor.ANSI_YELLOW + ", phoneNumber=" + ChangeColor.ANSI_YELLOW + "'" + ChangeColor.ANSI_RESET + getPhone() + ChangeColor.ANSI_YELLOW + "\'" + ChangeColor.ANSI_RESET +
                 ChangeColor.ANSI_YELLOW + ", doctor=" + ChangeColor.ANSI_YELLOW + "'" + ChangeColor.ANSI_RESET + doctor + ChangeColor.ANSI_YELLOW + "\'" + ChangeColor.ANSI_RESET +
-                ChangeColor.ANSI_YELLOW + ", registerDateTime=" + ChangeColor.ANSI_YELLOW + "'" + ChangeColor.ANSI_RESET + DateUtil.fromDateToString(registerDateTime) + ChangeColor.ANSI_YELLOW + "\'" + ChangeColor.ANSI_RESET +
+                ChangeColor.ANSI_YELLOW + ", registerDateTime=" + ChangeColor.ANSI_YELLOW + "'" + ChangeColor.ANSI_RESET + DateUtil.fromHourToString(registerDateTime) + ChangeColor.ANSI_YELLOW + "\'" + ChangeColor.ANSI_RESET +
                 '}';
     }
 }

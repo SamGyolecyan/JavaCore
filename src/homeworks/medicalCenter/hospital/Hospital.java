@@ -4,11 +4,19 @@ import consoleColors.ChangeColor;
 import homeworks.medicalCenter.comments.Comments;
 import homeworks.medicalCenter.model.Doctor;
 import homeworks.medicalCenter.model.Patient;
+import homeworks.medicalCenter.model.Profession;
 import homeworks.medicalCenter.storage.DoctorStorage;
 import homeworks.medicalCenter.storage.PatientStorage;
+import homeworks.medicalCenter.util.DateUtil;
 
+import java.text.ParseException;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
+
+
+// Time-ի պահը չհասկացա, թե ոնց պետք է 30 րոպե ավելացնեմ ։)
+
 
 public class Hospital implements Comments, ChangeColor {
 
@@ -69,7 +77,7 @@ public class Hospital implements Comments, ChangeColor {
 
 
     private static void addDoctor() {
-        System.out.println("Please input id, name, surname, phone, email, profession:");
+        System.out.println("Please input Doctor id, name, surname, phone, email, profession:");
         String doctorData = scanner.nextLine();
         String[] doctorArr = doctorData.split(",");
 
@@ -82,9 +90,13 @@ public class Hospital implements Comments, ChangeColor {
                 doctor.setSurname(doctorArr[2]);
                 doctor.setPhone(doctorArr[3]);
                 doctor.setEmail(doctorArr[4]);
-                doctor.setProfession(doctorArr[5]);
-                doctorStorage.addDoctor(doctor);
-                System.out.println(ANSI_GREEN + "Doctor is added!!" + ANSI_RESET);
+                try {
+                    doctor.setProfession(Profession.valueOf(doctorArr[5].toUpperCase()));
+                    doctorStorage.addDoctor(doctor);
+                    System.out.println(ANSI_GREEN + "Doctor is added!!" + ANSI_RESET);
+                } catch (IllegalArgumentException e) {
+                    System.out.println("It is a incorrect!!!");
+                }
             } else {
                 System.out.println(ANSI_RED + "Number Id " + id + "already exists!!" + ANSI_RESET);
             }
@@ -159,16 +171,23 @@ public class Hospital implements Comments, ChangeColor {
         Doctor doctor = doctorStorage.getDoctorById(doctorId);
 
         if (doctor != null) {
-            System.out.println("Please, input patient Id:");
+            System.out.println("Please, input Patient Id:");
             String patientId = scanner.nextLine();
-            System.out.println("Please, input patient name:");
+            System.out.println("Please, input Patient name:");
             String patientName = scanner.nextLine();
-            System.out.println("Please, input patient surname:");
+            System.out.println("Please, input Patient surname:");
             String patientSurname = scanner.nextLine();
-            System.out.println("Please, input patient phone:");
+            System.out.println("Please, input Patient phone:");
             String patientPhone = scanner.nextLine();
-
-            Patient patient = new Patient(patientId, patientName, patientSurname, patientPhone, doctor, new Date());
+            System.out.println("Please, input Patient order time (3:00 PM):");
+            Date date = new Date();
+            try {
+                String time = scanner.nextLine();
+                date = DateUtil.fromStringToHour(time);
+            } catch (ParseException e) {
+                System.out.println(ANSI_RED + "Incorrect time!!!" + ANSI_RESET);
+            }
+            Patient patient = new Patient(patientId, patientName, patientSurname, patientPhone, doctor, date);
             Patient patientById = patientStorage.getPatientById(patientId);
             if (patientById == null) {
                 patientStorage.addPatient(patient);
@@ -194,3 +213,4 @@ public class Hospital implements Comments, ChangeColor {
         doctorStorage.printDoctor();
     }
 }
+
